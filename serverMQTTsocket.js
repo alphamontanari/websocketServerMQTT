@@ -89,7 +89,7 @@ server.listen(websocketPort, () => {
     io.on('connection', (socket) => {
         client.on('message', (topic, message) => {
             socket.emit('mqttMessage', message.toString());
-            console.log(message.toString());
+           // console.log(message.toString());
         });
     });
 });
